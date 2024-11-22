@@ -1,14 +1,25 @@
 package com.example.taller4
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.commit
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val intent = Intent(this, PantallaDeInicio::class.java)
-        startActivity(intent)
-        finish() // Opcional: Finaliza MainActivity para que no esté en el back stack
+        setContentView(R.layout.activity_main) // Asegúrate de tener el layout "activity_main.xml"
+
+        // Cargar los fragmentos al iniciar
+        supportFragmentManager.commit {
+            replace(R.id.fragmentContainerLista, ListaPeliculasFragment())
+            replace(R.id.fragmentContainerDetalles, DetallesPeliculaFragment())
+        }
+    }
+
+    // Función para mostrar detalles de una película seleccionada
+    fun mostrarDetallesPelicula(pelicula: Pelicula) {
+        val detallesFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerDetalles) as? DetallesPeliculaFragment
+        detallesFragment?.mostrarDetalles(pelicula)
     }
 }
