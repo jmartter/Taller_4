@@ -3,6 +3,9 @@ package com.example.taller4
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
+import com.example.taller4.Fragments.DetallesPeliculaFragment
+import com.example.taller4.Fragments.ListaPeliculasFragment
+import com.example.taller4.Peliculas.Pelicula
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

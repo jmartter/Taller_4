@@ -1,4 +1,6 @@
-package com.example.taller4
+package com.example.taller4.Peliculas
+
+import com.example.taller4.R
 
 object PeliculaRepository {
 

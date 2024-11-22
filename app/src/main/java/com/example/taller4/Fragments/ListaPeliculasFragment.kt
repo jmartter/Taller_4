@@ -1,4 +1,4 @@
-package com.example.taller4
+package com.example.taller4.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.taller4.MainActivity
+import com.example.taller4.Peliculas.PeliculaRepository
+import com.example.taller4.Peliculas.PeliculasAdapter
+import com.example.taller4.R
 
 class ListaPeliculasFragment : androidx.fragment.app.Fragment() {
 

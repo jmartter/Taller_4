@@ -1,4 +1,4 @@
-package com.example.taller4
+package com.example.taller4.Widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -7,6 +7,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
+import com.example.taller4.R
 
 class PeliculasWidgetProvider : AppWidgetProvider() {
 

@@ -1,8 +1,10 @@
-package com.example.taller4
+package com.example.taller4.Widget
 
 import android.content.Context
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
+import com.example.taller4.Peliculas.Pelicula
+import com.example.taller4.Peliculas.PeliculaRepository
 
 class PeliculasRemoteViewsFactory(private val context: Context) : RemoteViewsService.RemoteViewsFactory {
 

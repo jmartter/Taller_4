@@ -1,6 +1,5 @@
-package com.example.taller4
+package com.example.taller4.Pantalla
 
-import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -13,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.taller4.R
 import com.example.taller4.ui.theme.Taller4Theme
 import java.util.*
 

@@ -1,4 +1,4 @@
-package com.example.taller4
+package com.example.taller4.Widget
 
 import android.content.Intent
 import android.widget.RemoteViewsService
