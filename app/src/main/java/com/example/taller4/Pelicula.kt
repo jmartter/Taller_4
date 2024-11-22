@@ -5,5 +5,5 @@ data class Pelicula(
     val descripcion: String,
     val anio: Int,
     val calificacion: Double,
-    val imagen: Int // Referencia a drawable
+    val imagen: Int
 )
