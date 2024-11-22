@@ -24,6 +24,20 @@ object PeliculaRepository {
             anio = 2013,
             calificacion = 7.5,
             imagen = R.drawable.frozen
+        ),
+        Pelicula(
+            titulo = "Matrix",
+            descripcion = "Un programador descubre la verdad detrás de su realidad.",
+            anio = 1999,
+            calificacion = 8.7,
+            imagen = R.drawable.matrix
+        ),
+        Pelicula(
+            titulo = "Toy Story",
+            descripcion = "La vida secreta de los juguetes cuando los humanos no están presentes.",
+            anio = 1995,
+            calificacion = 8.3,
+            imagen = R.drawable.toy_story
         )
     )
 

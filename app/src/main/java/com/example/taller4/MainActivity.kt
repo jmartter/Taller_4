@@ -7,7 +7,7 @@ import androidx.fragment.app.commit
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // Asegúrate de tener el layout "activity_main.xml"
+        setContentView(R.layout.activity_main)
 
         // Cargar los fragmentos al iniciar
         supportFragmentManager.commit {
