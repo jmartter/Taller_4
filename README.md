@@ -44,9 +44,10 @@ La aplicación está compuesta por los siguientes componentes principales:
 ## Cómo Funciona
 
 1. **MainActivity**: Inicializa los fragmentos y registra un listener de sensor para detectar el movimiento del dispositivo y cambiar el color de fondo.
-2. **ListaPeliculasFragment**: Muestra la lista de películas usando un RecyclerView y PeliculasAdapter.
-3. **DetallesPeliculaFragment**: Muestra los detalles de una película seleccionada.
-4. **GestionPeliculasFragment**: Proporciona un diálogo para agregar una nueva película y maneja la eliminación de películas.
-5. **PeliculaRepository**: Gestiona la lista de películas y asegura que no haya títulos duplicados y calificaciones válidas.
-6. **Widget**: Muestra la lista de títulos de películas y se actualiza cuando cambia la lista de películas.
+2. **Pantalla de Inicio**: Muestra un saludo basado en la hora del día y un botón para navegar a la actividad principal.
+3. **ListaPeliculasFragment**: Muestra la lista de películas usando un RecyclerView y PeliculasAdapter.
+4. **DetallesPeliculaFragment**: Muestra los detalles de una película seleccionada.
+5. **GestionPeliculasFragment**: Proporciona un diálogo para agregar una nueva película y maneja la eliminación de películas.
+6. **PeliculaRepository**: Gestiona la lista de películas y asegura que no haya títulos duplicados y calificaciones válidas.
+7. **Widget**: Muestra la lista de títulos de películas y se actualiza cuando cambia la lista de películas.
 
