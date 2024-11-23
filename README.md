@@ -11,13 +11,15 @@ El repositorio para este proyecto se puede encontrar en: [https://github.com/jma
 La aplicación está compuesta por los siguientes componentes principales:
 
 1. **MainActivity**: La actividad principal que aloja los fragmentos y maneja los eventos del sensor para cambiar el color de fondo según el movimiento del dispositivo.
-2. **Fragmentos**:
+2. **Pantalla de Inicio**:
+   - **ActividadPrincipalScreen**: Una pantalla de bienvenida que muestra un saludo basado en la hora del día y un botón para navegar a la actividad principal.
+3. **Fragmentos**:
    - **ListaPeliculasFragment**: Muestra la lista de películas.
    - **DetallesPeliculaFragment**: Muestra los detalles de una película seleccionada.
    - **GestionPeliculasFragment**: Gestiona la adición y eliminación de películas.
-3. **PeliculaRepository**: Gestiona la lista de películas y maneja la adición, eliminación y recuperación de películas.
-4. **PeliculasAdapter**: Un adaptador para mostrar la lista de películas en un RecyclerView.
-5. **Widget**:
+4. **PeliculaRepository**: Gestiona la lista de películas y maneja la adición, eliminación y recuperación de películas.
+5. **PeliculasAdapter**: Un adaptador para mostrar la lista de películas en un RecyclerView.
+6. **Widget**:
    - **PeliculasWidgetProvider**: El AppWidgetProvider para el widget de la lista de películas.
    - **PeliculasWidgetService**: El servicio que proporciona datos al widget.
    - **PeliculasRemoteViewsFactory**: La fábrica que crea RemoteViews para el widget.
