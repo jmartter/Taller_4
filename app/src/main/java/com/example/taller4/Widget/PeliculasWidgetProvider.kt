@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.example.taller4.R
+import com.example.taller4.Peliculas.PeliculaRepository
 
 class PeliculasWidgetProvider : AppWidgetProvider() {
 
@@ -37,6 +38,10 @@ class PeliculasWidgetProvider : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         if (intent.action == ACTION_REFRESH) {
+            // Refresh the data
+            PeliculaRepository.obtenerTitulosDePeliculas()
+
+            // Update the widget
             val appWidgetManager = AppWidgetManager.getInstance(context)
             val appWidgetIds = appWidgetManager.getAppWidgetIds(ComponentName(context, PeliculasWidgetProvider::class.java))
             appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widgetListView)

@@ -3,31 +3,30 @@ package com.example.taller4.Widget
 import android.content.Context
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
-import com.example.taller4.Peliculas.Pelicula
 import com.example.taller4.Peliculas.PeliculaRepository
 
 class PeliculasRemoteViewsFactory(private val context: Context) : RemoteViewsService.RemoteViewsFactory {
 
-    private var peliculas: List<Pelicula> = emptyList()
+    private var titulos: List<String> = emptyList()
 
     override fun onCreate() {
         // No-op
     }
 
     override fun onDataSetChanged() {
-        peliculas = PeliculaRepository.obtenerPeliculas()
+        titulos = PeliculaRepository.obtenerTitulosDePeliculas()
     }
 
     override fun onDestroy() {
         // No-op
     }
 
-    override fun getCount(): Int = peliculas.size
+    override fun getCount(): Int = titulos.size
 
     override fun getViewAt(position: Int): RemoteViews {
-        val pelicula = peliculas[position]
+        val titulo = titulos[position]
         val views = RemoteViews(context.packageName, android.R.layout.simple_list_item_1)
-        views.setTextViewText(android.R.id.text1, pelicula.titulo)
+        views.setTextViewText(android.R.id.text1, titulo)
         return views
     }
 

@@ -48,8 +48,7 @@ object PeliculaRepository {
         return peliculas
     }
 
-    // Método para obtener una película por su título (opcional)
-    fun obtenerPeliculaPorTitulo(titulo: String): Pelicula? {
-        return peliculas.find { it.titulo == titulo }
+    fun obtenerTitulosDePeliculas(): List<String> {
+        return peliculas.map { it.titulo }
     }
 }
