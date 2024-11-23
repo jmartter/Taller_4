@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.example.taller4.Fragments.DetallesPeliculaFragment
+import com.example.taller4.Fragments.GestionPeliculasFragment
 import com.example.taller4.Fragments.ListaPeliculasFragment
 import com.example.taller4.Peliculas.Pelicula
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.commit {
             replace(R.id.fragmentContainerLista, ListaPeliculasFragment())
             replace(R.id.fragmentContainerDetalles, DetallesPeliculaFragment())
+            replace(R.id.fragmentContainerGestion, GestionPeliculasFragment())
         }
     }
 
