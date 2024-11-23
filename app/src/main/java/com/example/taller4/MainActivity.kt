@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val z = it.values[2]
 
             val acceleration = Math.sqrt((x * x + y * y + z * z).toDouble())
-            if (acceleration > 15) { // Threshold for detecting significant movement
+            if (acceleration > 15) {
                 layout.setBackgroundColor(Color.rgb((0..255).random(), (0..255).random(), (0..255).random()))
             }
         }

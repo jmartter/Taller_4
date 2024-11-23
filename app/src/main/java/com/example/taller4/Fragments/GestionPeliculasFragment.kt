@@ -50,8 +50,16 @@ class GestionPeliculasFragment : Fragment() {
                 val year = editTextYear.text.toString().toIntOrNull() ?: 0
                 val rating = editTextRating.text.toString().toDoubleOrNull() ?: 0.0
                 val movie = Pelicula(title, description, year, rating, R.drawable.default_image)
-                PeliculaRepository.agregarPelicula(movie)
-                (activity as? MainActivity)?.actualizarListaPeliculas()
+                try {
+                    PeliculaRepository.agregarPelicula(movie)
+                    (activity as? MainActivity)?.actualizarListaPeliculas()
+                } catch (e: PeliculaRepository.PeliculaYaExisteException) {
+                    AlertDialog.Builder(context)
+                        .setTitle("Error")
+                        .setMessage(e.message)
+                        .setPositiveButton("OK", null)
+                        .show()
+                }
             }
             .setNegativeButton("Cancel", null)
             .show()

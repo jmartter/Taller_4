@@ -20,14 +20,12 @@ class PeliculasWidgetProvider : AppWidgetProvider() {
         for (appWidgetId in appWidgetIds) {
             val views = RemoteViews(context.packageName, R.layout.peliculas_widget)
 
-            // Set up the intent for the refresh button
             val refreshIntent = Intent(context, PeliculasWidgetProvider::class.java).apply {
                 action = ACTION_REFRESH
             }
             val refreshPendingIntent = PendingIntent.getBroadcast(context, 0, refreshIntent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
             views.setOnClickPendingIntent(R.id.buttonRefresh, refreshPendingIntent)
 
-            // Set up the adapter for the ListView
             val intent = Intent(context, PeliculasWidgetService::class.java)
             views.setRemoteAdapter(R.id.widgetListView, intent)
 
@@ -38,10 +36,8 @@ class PeliculasWidgetProvider : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         if (intent.action == ACTION_REFRESH) {
-            // Refresh the data
             PeliculaRepository.obtenerTitulosDePeliculas()
 
-            // Update the widget
             val appWidgetManager = AppWidgetManager.getInstance(context)
             val appWidgetIds = appWidgetManager.getAppWidgetIds(ComponentName(context, PeliculasWidgetProvider::class.java))
             appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widgetListView)

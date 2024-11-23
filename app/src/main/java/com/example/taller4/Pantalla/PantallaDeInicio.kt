@@ -13,7 +13,6 @@ class PantallaDeInicio : ComponentActivity() {
         setContent {
             Taller4Theme {
                 ActividadPrincipalScreen {
-                    // Navegar a la Actividad Principal
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }

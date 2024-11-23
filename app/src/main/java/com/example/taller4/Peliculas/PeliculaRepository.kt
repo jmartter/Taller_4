@@ -51,9 +51,14 @@ object PeliculaRepository {
         peliculas.remove(pelicula)
     }
 
-    fun agregarPelicula(pelicula: Pelicula) {
-        peliculas.add(pelicula)
+class PeliculaYaExisteException(message: String) : Exception(message)
+
+fun agregarPelicula(pelicula: Pelicula) {
+    if (peliculas.any { it.titulo == pelicula.titulo }) {
+        throw PeliculaYaExisteException("La película con el título '${pelicula.titulo}' ya existe.")
     }
+    peliculas.add(pelicula)
+}
 
     fun obtenerTitulosDePeliculas(): List<String> {
         return peliculas.map { it.titulo }
