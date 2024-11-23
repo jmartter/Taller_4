@@ -43,14 +43,16 @@ object PeliculaRepository {
         )
     )
 
-    // Método para obtener todas las películas
     fun obtenerPeliculas(): List<Pelicula> {
         return peliculas
     }
 
-    // Método para borrar una película
     fun borrarPelicula(pelicula: Pelicula) {
         peliculas.remove(pelicula)
+    }
+
+    fun agregarPelicula(pelicula: Pelicula) {
+        peliculas.add(pelicula)
     }
 
     fun obtenerTitulosDePeliculas(): List<String> {

@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Cargar los fragmentos al iniciar
         supportFragmentManager.commit {
             replace(R.id.fragmentContainerLista, ListaPeliculasFragment())
             replace(R.id.fragmentContainerDetalles, DetallesPeliculaFragment())
@@ -24,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Función para mostrar detalles de una película seleccionada
     fun mostrarDetallesPelicula(pelicula: Pelicula) {
         peliculaSeleccionada = pelicula
         val detallesFragment =
@@ -32,14 +30,17 @@ class MainActivity : AppCompatActivity() {
         detallesFragment?.mostrarDetalles(pelicula)
     }
 
-    // Función para borrar la película seleccionada
     fun borrarPeliculaSeleccionada() {
         peliculaSeleccionada?.let { pelicula ->
             PeliculaRepository.borrarPelicula(pelicula)
             peliculaSeleccionada = null
-            val listaFragment =
-                supportFragmentManager.findFragmentById(R.id.fragmentContainerLista) as? ListaPeliculasFragment
-            listaFragment?.actualizarLista()
+            actualizarListaPeliculas()
         }
+    }
+
+    fun actualizarListaPeliculas() {
+        val listaFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerLista) as? ListaPeliculasFragment
+        listaFragment?.actualizarLista()
     }
 }
