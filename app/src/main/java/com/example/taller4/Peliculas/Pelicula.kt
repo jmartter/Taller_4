@@ -1,4 +1,4 @@
-package com.example.taller4
+package com.example.taller4.Peliculas
 
 data class Pelicula(
     val titulo: String,

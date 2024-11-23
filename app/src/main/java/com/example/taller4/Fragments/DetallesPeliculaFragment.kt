@@ -1,4 +1,4 @@
-package com.example.taller4
+package com.example.taller4.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.taller4.Peliculas.Pelicula
+import com.example.taller4.R
 
 class DetallesPeliculaFragment : Fragment() {
 
