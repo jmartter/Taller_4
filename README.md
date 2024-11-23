@@ -32,14 +32,12 @@ La aplicación está compuesta por los siguientes componentes principales:
 
 ## Capturas de Pantalla
 
-### Pantalla Principal con Saludo
-<img src="app/src/main/res/screenshots/main_screen.png" alt="Pantalla Principal" width="300"/>
-
-### Lista de Películas con Fragmentos
-<img src="app/src/main/res/screenshots/movie_list.png" alt="Lista de Películas" width="300"/>
-
-### Widget
-<img src="app/src/main/res/screenshots/widget.png" alt="Widget" width="300"/>
+### Pantalla Principal con Saludo, Lista de Películas con Fragmentos y Widget
+<div style="display: flex; justify-content: space-around;">
+    <img src="app/src/main/res/screenshots/main_screen.png" alt="Pantalla Principal" width="200"/>
+    <img src="app/src/main/res/screenshots/movie_list.png" alt="Lista de Películas" width="200"/>
+    <img src="app/src/main/res/screenshots/widget.png" alt="Widget" width="200"/>
+</div>
 
 ## Cómo Funciona
 
