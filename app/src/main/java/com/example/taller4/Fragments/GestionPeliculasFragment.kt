@@ -59,6 +59,12 @@ class GestionPeliculasFragment : Fragment() {
                         .setMessage(e.message)
                         .setPositiveButton("OK", null)
                         .show()
+                } catch (e: PeliculaRepository.ValoracionInvalidaException) {
+                    AlertDialog.Builder(context)
+                        .setTitle("Error")
+                        .setMessage(e.message)
+                        .setPositiveButton("OK", null)
+                        .show()
                 }
             }
             .setNegativeButton("Cancel", null)

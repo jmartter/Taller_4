@@ -3,6 +3,8 @@ package com.example.taller4.Peliculas
 import com.example.taller4.R
 
 object PeliculaRepository {
+    class PeliculaYaExisteException(message: String) : Exception(message)
+    class ValoracionInvalidaException(message: String) : Exception(message)
 
     // Lista de películas de ejemplo
     private val peliculas = mutableListOf(
@@ -51,11 +53,12 @@ object PeliculaRepository {
         peliculas.remove(pelicula)
     }
 
-class PeliculaYaExisteException(message: String) : Exception(message)
-
 fun agregarPelicula(pelicula: Pelicula) {
     if (peliculas.any { it.titulo == pelicula.titulo }) {
         throw PeliculaYaExisteException("La película con el título '${pelicula.titulo}' ya existe.")
+    }
+    if (pelicula.calificacion !in 0.0..10.0) {
+        throw ValoracionInvalidaException("La calificación debe estar entre 0 y 10.")
     }
     peliculas.add(pelicula)
 }
