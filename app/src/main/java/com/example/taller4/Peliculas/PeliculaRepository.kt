@@ -5,7 +5,7 @@ import com.example.taller4.R
 object PeliculaRepository {
 
     // Lista de películas de ejemplo
-    private val peliculas = listOf(
+    private val peliculas = mutableListOf(
         Pelicula(
             titulo = "El Señor de los Anillos",
             descripcion = "Un épico viaje para destruir el Anillo Único.",
@@ -46,6 +46,11 @@ object PeliculaRepository {
     // Método para obtener todas las películas
     fun obtenerPeliculas(): List<Pelicula> {
         return peliculas
+    }
+
+    // Método para borrar una película
+    fun borrarPelicula(pelicula: Pelicula) {
+        peliculas.remove(pelicula)
     }
 
     fun obtenerTitulosDePeliculas(): List<String> {

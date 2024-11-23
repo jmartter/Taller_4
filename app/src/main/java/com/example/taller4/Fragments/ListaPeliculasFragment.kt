@@ -33,4 +33,9 @@ class ListaPeliculasFragment : androidx.fragment.app.Fragment() {
 
         return view
     }
+
+    // Método para actualizar la lista de películas
+    fun actualizarLista() {
+        peliculasAdapter.notifyDataSetChanged()
+    }
 }
